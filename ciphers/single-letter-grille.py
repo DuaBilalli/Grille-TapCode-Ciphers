@@ -1,7 +1,7 @@
-def single_letter_grille_encrypt():
+def single_letter_grille_encrypt(plainText: str) -> str:
     pass
 
-def single_letter_grille_decrypt():
+def single_letter_grille_decrypt(cipherText: str) -> str:
     pass
 
 def main():
