@@ -24,4 +24,17 @@ def find_position(letter):
         row_number += 1
 
     return None
+def encode_letter(letter):
+    position = find_position(letter)
+
+    if position is None:
+        return ""
+
+    row = position[0]
+    col = position[1]
+
+    taps_row = "." * row
+    taps_col = "." * col
+
+    return taps_row + " " + taps_col
 
