@@ -38,3 +38,16 @@ def encode_letter(letter):
 
     return taps_row + " " + taps_col
 
+def encrypt_tap_code(text):
+    result = []
+    text = text.upper()
+
+    for char in text:
+        if char == " ":
+            result.append("/")
+        elif char.isalpha():
+            code = encode_letter(char)
+            result.append(code)
+
+    return "   ".join(result)
+
