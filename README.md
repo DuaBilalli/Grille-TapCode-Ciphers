@@ -44,6 +44,13 @@ Në këtë rast, programi do të mbyllet dhe do të shfaqet një mesazh konfirmi
 # Përshkrimi i algoritmeve
 ## Tap Code Cipher
 
+Tap Code është një mënyrë shumë e thjeshtë për të koduar mesazhe tekstuale, ku çdo shkronjë përfaqësohet me dy grupe trokitjesh ose pikash. Ai bazohet në një matricë 5×5 të alfabetit latin dhe zakonisht shkronja **K** përfaqësohet nga **C**, sepse matrica ka vetëm 25 vende.
+
+Për të transmetuar një shkronjë, fillimisht jepet numri i trokitjeve për rreshtin dhe pastaj, pas një pauze të shkurtër, numri i trokitjeve për kolonën. Për shembull, shkronja **B** jepet me një trokitje, pauzë, dhe pastaj dy trokitje. 
+
+Kjo metodë është përdorur shpesh nga të burgosurit për të komunikuar mes tyre duke trokitur në mure, tuba ose shufra metalike. Tap Code konsiderohet i lehtë për t’u mësuar dhe praktik për situata ku nuk mund të flitet hapur.
+
+Në këtë projekt, Tap Code përdoret për të enkriptuar tekstin duke e kthyer çdo shkronjë në pozicionin e saj përkatës në matricën 5×5.
 ### Enkriptimi
 
 ### Dekriptimi
