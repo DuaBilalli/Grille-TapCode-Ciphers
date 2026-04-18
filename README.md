@@ -3,6 +3,44 @@ Python project implementing classical ciphers: Single Letter Grille Cipher and T
 
 # Ekzekutimi i programit
 
+Për të ekzekutuar programin, ndiqni hapat e mëposhtëm:
+
+### 1. Sigurohuni që keni të instaluar Python në sistemin tuaj
+
+Programi është shkruar në Python, prandaj është e domosdoshme që Python të jetë i instaluar dhe i konfiguruar siç duhet në kompjuterin tuaj.
+Nëse Python nuk është i instaluar, programi nuk do të mund të ekzekutohet fare.
+
+### 2. Hapni terminalin në folderin e projektit
+
+Hapni folderin e projektit ku ndodhen file-t e projektit, në folderin `ciphers` veçanërisht aty ku gjendet file `main.py`. Sigurohuni që të gjitha file-t e nevojshme (p.sh. algoritmet dhe main file) janë në të njëjtin folder për të shmangur gabimet gjatë importimit.
+
+### 3. Ekzekutoni programin
+
+Në terminal shkruani komandën:
+
+```bash
+python main.py
+```
+Pas ekzekutimit, programi fillon menjëherë dhe shfaq menunë kryesore interaktive në terminal.
+
+## Program Features
+
+Programi është interaktiv dhe i bazuar në menu, ku përdoruesi mund të:
+
+- Zgjedhë një nga dy algoritmet kriptografike (Single-Letter Grille ose Tap Code)
+- Jap plaintext-in për enkriptim
+- Marrë rezultatin e enkriptimit (ciphertext)
+- Kryejë automatikisht dekriptimin për të rikthyer tekstin origjinal
+- Shikojë vizualizimin hap pas hapi të procesit të enkriptimit/dekriptimit (opsional)
+- Dal nga programi 
+
+Programi është ndërtuar për të demonstruar qartë procesin e enkriptimit dhe dekriptimit dhe për të ndihmuar në kuptimin e funksionimit të algoritmeve kriptografike duke mundësuar vizualizimin e procesit.
+
+### Dalja nga programi
+
+Për të dalë nga programi, përdoruesi duhet të zgjedhë opsionin e daljes nga menuja ose të shkruajë një input që nuk i përket opsioneve të ofruara.
+Në këtë rast, programi do të mbyllet dhe do të shfaqet një mesazh konfirmimi që programi është mbyllur me sukses.
+
 # Përshkrimi i algoritmeve
 ## Tap Code Cipher
 
