@@ -52,3 +52,32 @@ def encrypt_tap_code(text):
 
     return "   ".join(result)
 
+import time
+
+def visualize_tapcode_process(plainText):
+    print("\n[VIZUALIZIMI I PROCESIT]\n")
+    time.sleep(1)
+
+    plainText = plainText.upper().strip()
+
+    for char in plainText:
+        if char == " ":
+            print("/")
+            time.sleep(1)
+            print()
+        elif char.isalpha():
+            position = find_position(char)
+
+            if position is not None:
+                row = position[0]
+                col = position[1]
+
+                print(f"{char}:")
+
+                print(" ".join(["."] * row))
+                time.sleep(0.5)
+
+                print(" ".join(["."] * col))
+                time.sleep(1)
+
+                print()
