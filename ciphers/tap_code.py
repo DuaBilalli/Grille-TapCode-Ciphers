@@ -81,3 +81,6 @@ def visualize_tapcode_process(plainText):
                 time.sleep(1)
 
                 print()
+
+                def find_letter_by_position(row, col):
+                    return TAP_MATRIX[row - 1][col - 1]
