@@ -1,5 +1,6 @@
 import string
 import random
+import time
 
 def grille_positions() -> list:
     #pozitat per vrimat e lira
@@ -72,14 +73,35 @@ def single_letter_grille_decrypt(cipherText: str) -> str:
 
     return plainText.rstrip('X')
 
-def main():
-    text = input("Shkruaj tekstin: ")
+def visualize_grille_process(cipherText: str):
+    holes = grille_positions()
+    cipherText = cipherText.replace("\n", "")
+    block_size = 36
 
-    encrypted = single_letter_grille_encrypt(text)
-    print(f"\nEncrypted:\n{encrypted}")
+    print("\n[VIZUALIZIMI I PROCESIT]\n")
+    time.sleep(1)
 
-    decrypted = single_letter_grille_decrypt(encrypted)
-    print(f"Decrypted: {decrypted}")
+    for b in range(0, len(cipherText), block_size):
+        block = cipherText[b:b+block_size]
 
-if __name__ == "__main__":
-    main()
+        grid = {}
+        k = 0
+
+        #mbushet grid
+        for i in range(6):
+            for j in range(6):
+                grid[(i,j)] = block[k]
+                k += 1
+
+        #me kriju empty matrice 6x6
+        reveal = [["_" for _ in range(6)] for _ in range(6)]
+
+        #revealing holes
+        for (i,j) in holes:
+            reveal[i][j] = grid[(i,j)]
+
+            for row in reveal:
+                print(" ".join(row))
+            print()
+
+            time.sleep(0.5)
