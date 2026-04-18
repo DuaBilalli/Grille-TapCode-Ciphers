@@ -52,6 +52,24 @@ Kjo metodë është përdorur shpesh nga të burgosurit për të komunikuar mes 
 
 Në këtë projekt, Tap Code përdoret për të enkriptuar tekstin duke e kthyer çdo shkronjë në pozicionin e saj përkatës në matricën 5×5.
 ### Enkriptimi
+Në këtë projekt, enkriptimi me **Tap Code** është realizuar në Python duke përdorur një matricë **5x5** që përmban shkronjat e alfabetit. Çdo shkronjë përfaqësohet sipas **rreshtit** dhe **kolonës** ku ndodhet në këtë matricë. Për shkak se matrica ka vetëm 25 vende, shkronja **K** trajtohet si **C**.
+
+Procesi i enkriptimit është ndërtuar me disa hapa të thjeshtë:
+
+- Fillimisht krijohet matrica 5x5 e Tap Code.
+- Pastaj përdoret funksioni `find_position(letter)` për të gjetur pozitën e një shkronje në matricë.
+- Funksioni `encode_letter(letter)` e kthen një shkronjë në formën e saj Tap Code, duke përdorur pika për rreshtin dhe kolonën.
+- Funksioni `encrypt_tap_code(text)` përdoret për të enkriptuar tekstin e plotë. Ky funksion:
+  - e pastron tekstin me `strip()`
+  - e kthen në shkronja të mëdha me `upper()`
+  - kontrollon çdo karakter me `for`
+  - enkripton vetëm shkronjat me `isalpha()`
+  - i injoron karakteret e pambështetura
+  - hapësirat i zëvendëson me `/`
+
+Përveç enkriptimit kryesor, në projekt është shtuar edhe funksioni `visualize_tapcode_process(plainText)`, i cili tregon hap pas hapi procesin e shndërrimit të çdo shkronje në Tap Code. Në këtë pjesë është përdorur edhe moduli `time` me `time.sleep()` për ta bërë vizualizimin më të qartë.
+
+Ky implementim e bën algoritmin të thjeshtë për t’u kuptuar, testuar dhe përdorur për enkriptimin e fjalëve dhe fjalive me Tap Code.
 
 ### Dekriptimi
 
