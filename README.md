@@ -82,17 +82,17 @@ Sot kjo teknikë konsiderohet e pasigurt dhe nuk përdoret në kriptografinë mo
 
 ### Enkriptimi
 
-Enkriptimi në Single Letter Grille bëhet duke vendosur plainttext-in në një matricë duke përdorur një grille.
+Enkriptimi në Single-Letter Grille bëhet duke vendosur plaintext-in në një matricë duke përdorur një grille.
 
-**1.** Fillimisht krijohet një matricë bosh me madhësi 6x6 në rastin tonë. 
+- Fillimisht krijohet një matricë bosh, me madhësi 6x6 në rastin tonë. 
 
-**2.** Më pas definohet maska (grille), e cila përcakton saktë pozicionet ku do të vendosen shkronjat, ku çdo pozicion përdoret vetëm një herë dhe nuk ka rotacion të maskës.  
+- Më pas definohet maska (grille), e cila përcakton saktë pozicionet ku do të vendosen shkronjat, ku çdo pozicion përdoret vetëm një herë dhe nuk ka rotacion të maskës.  
 
-**3.** Plaintext-i merret dhe secili karakter vendoset vetëm në pozicionet e parapërcaktuara të maskës, një nga një sipas rendit të tij.
+- Plaintext-i merret dhe secili karakter vendoset vetëm në pozicionet e parapërcaktuara të maskës, një nga një sipas rendit të tij.
 
-**4.** Pozicionet e mbetura në matricë mbushen me karaktere të rastësishme (shkronja dhe numra), për të fshehur strukturën e mesazhit.
+- Pozicionet e mbetura në matricë mbushen me karaktere të rastësishme (shkronja dhe numra), për të fshehur strukturën e mesazhit.
 
-**5.** Në fund, matrica lexohet rresht pas rreshti për të krijuar tekstin e enkriptuar (ciphertext).
+- Në fund, matrica lexohet rresht pas rreshti për të krijuar tekstin e enkriptuar (ciphertext).
 
 **Ideja kryesore:** Meqë karakteret mbushëse janë të rastësishme, i njëjti mesazh mund të prodhojë ciphertext të ndryshëm sa herë ekzekutohet dhe vetëm personi që posedon maskën e saktë mund të gjej mesazhin origjinal.
 
@@ -100,17 +100,17 @@ Enkriptimi në Single Letter Grille bëhet duke vendosur plainttext-in në një 
 
 Dekriptimi në Single Letter Grille bëhet duke përdorur të njëjtën grille (maskë) që është përdorur gjatë enkriptimit.
 
-**1.** Fillimisht ciphertext-i ndahet në blloqe prej 36 karakteresh (6x6).
+- Fillimisht ciphertext-i ndahet në blloqe prej 36 karakteresh (6x6).
 
-**2.** Çdo bllok i ciphertext-it vendoset në një matricë 6x6, duke u mbushur matrica me karaktere rresht pas rreshti.
+- Çdo bllok i ciphertext-it vendoset në një matricë 6x6, duke u mbushur matrica me karaktere rresht pas rreshti.
 
-**3.** Më pas aplikohet maska(grille), e cila përcakton saktë pozicionet ku gjendet plaintext-i.
+- Më pas aplikohet maska(grille), e cila përcakton saktë pozicionet ku gjendet plaintext-i.
 
-**4.** Karakteret lexohen vetëm nga pozicionet e paracaktuara të maskës, një nga një sipas rendit të tyre.
+- Karakteret lexohen vetëm nga pozicionet e paracaktuara të maskës, një nga një sipas rendit të tyre.
 
-**5.** Karakteret e lexuara bashkohen për të formuar mesazhin origjinal (plaintext).
+- Karakteret e lexuara bashkohen për të formuar mesazhin origjinal (plaintext).
 
-**6.** Në fund hiqen karakteret 'X' të përdorura si padding gjatë enkriptimit.
+- Në fund hiqen karakteret 'X' të përdorura si padding gjatë enkriptimit.
 
 **Ideja kryesore:** Vetëm duke përdorur të njëjtën maskë mund të identifikohen pozicionet e sakta në matricë dhe të gjendet mesazhi origjinal.
 
