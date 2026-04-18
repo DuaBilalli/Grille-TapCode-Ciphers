@@ -47,7 +47,8 @@ def encrypt_tap_code(text):
             result.append("/")
         elif char.isalpha():
             code = encode_letter(char)
-            result.append(code)
+            if code != "":
+                result.append(code)
 
     return "   ".join(result)
 
