@@ -1,5 +1,9 @@
 # Hyrje
-Python project implementing classical ciphers: Single Letter Grille Cipher and Tap Code Cipher. Encrypts and decrypts messages while demonstrating knowledge of classical cryptography, algorithm implementation, and GitHub repository management.
+Ky projekt është zhvilluar si një implementim praktik i dy algoritmeve klasike të kriptografisë: **Single Letter Grille** dhe **Tap Code**. Qëllimi i tij është të demonstrojë në mënyrë të thjeshtë dhe të kuptueshme se si funksionon enkriptimi dhe dekriptimi i mesazheve duke përdorur teknika të ndryshme të kodimit.
+
+Nëpërmjet këtij projekti, përdoruesi mund të shohë se si një tekst i thjeshtë (plaintext) transformohet në një formë të koduar (ciphertext) dhe më pas rikthehet në formën origjinale përmes procesit të dekriptimit. Kjo ndihmon në kuptimin e bazave të kriptografisë dhe mënyrës se si informacioni mund të fshehet dhe të rikthehet.
+
+Përveç funksionalitetit kryesor, projekti përfshin edhe një strukturë të organizuar të kodit dhe opsione për vizualizim të procesit, duke e bërë më të lehtë ndjekjen hap pas hapi të funksionimit të algoritmeve.
 
 # Project Structure
 ```
