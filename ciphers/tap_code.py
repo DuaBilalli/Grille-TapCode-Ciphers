@@ -40,7 +40,7 @@ def encode_letter(letter):
 
 def encrypt_tap_code(text):
     result = []
-    text = text.upper()
+    text = text.strip().upper()
 
     for char in text:
         if char == " ":
