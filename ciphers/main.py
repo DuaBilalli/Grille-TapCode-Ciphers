@@ -1,6 +1,5 @@
-from ciphers.single_letter_grille import single_letter_grille_encrypt, single_letter_grille_decrypt, visualize_grille_process
-from ciphers.tap_code import encrypt_tap_code, visualize_tapcode_process
-
+from single_letter_grille import single_letter_grille_encrypt, single_letter_grille_decrypt, visualize_grille_process
+from tap_code import encrypt_tap_code, visualize_tapcode_process
 
 def main():
     while True:
@@ -9,7 +8,7 @@ def main():
         print("2. Tap Code")
         print("3. Dil")
 
-        choice = input("\nZgjedh algoritmin që dëshironi të përdorni: ")
+        choice = input("\nZgjedhja: ")
 
         if choice == "1":
             plainText = input("\nShkruaj plaintext-in: ")
@@ -18,7 +17,7 @@ def main():
             print(f"\nEncrypted:\n{cipherText}")
 
             decrypted = single_letter_grille_decrypt(cipherText)
-            print(f"\nDecrypted:\n{decrypted}")
+            print(f"Decrypted:\n{decrypted}")
 
             show = input("\nA dëshironi të shihni vizualizimin? (y/n): ").lower()
             if show == "y":
@@ -35,12 +34,11 @@ def main():
                 visualize_tapcode_process(plainText)
 
         elif choice == "3":
-            print("\nProgrami u mbyll.")
+            print("\nProgrami u mbyll me sukses. Faleminderit!")
             break
 
         else:
-            print("\nZgjedhje e pavlefshme, provo përsëri.")
-
+            print("\nZgjedhje e pavlefshme! Provoni përsëri!")
 
 if __name__ == "__main__":
     main()
