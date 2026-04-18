@@ -1,6 +1,22 @@
 # Hyrje
 Python project implementing classical ciphers: Single Letter Grille Cipher and Tap Code Cipher. Encrypts and decrypts messages while demonstrating knowledge of classical cryptography, algorithm implementation, and GitHub repository management.
 
+# Project Structure
+```
+Grille-TapCode-Ciphers/
+│
+├── ciphers/
+│ ├── main.py
+│ ├── single_letter_grille.py
+│ ├── tap_code.py
+│
+├── images/
+│ └── ...
+│
+├── .gitignore
+└── README.md
+```
+
 # Ekzekutimi i programit
 
 Për të ekzekutuar programin, ndiqni hapat e mëposhtëm:
