@@ -19,5 +19,7 @@ def main():
             show = input("\nA dëshironi të shihni vizualizimin? (y/n): ").lower()
             if show == "y":
                 visualize_grille_process(cipherText)
+
+                
 if __name__=="__main__":
     main()
