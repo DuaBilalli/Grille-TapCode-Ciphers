@@ -1,5 +1,5 @@
-from ciphers.single_letter_grille import single_letter_grille_encrypt, single_letter_grille_decrypt, visualize_grille_process
-from ciphers.tap_code import encrypt_tap_code, decrypt_tap_code, visualize_tapcode_process, visualize_tapcode_decryption
+from single_letter_grille import single_letter_grille_encrypt, single_letter_grille_decrypt, visualize_grille_process
+from tap_code import encrypt_tap_code, decrypt_tap_code, visualize_tapcode_process, visualize_tapcode_decryption
 
 def main():
     while True:
