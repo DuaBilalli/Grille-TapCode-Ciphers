@@ -92,8 +92,25 @@ def visualize_tapcode_process(plainText):
                     if len(parts) != 2:
                         return ""
 
-                    row = len(parts[0])
-                    col = len(parts[1])
+                    first_part = parts[0]
+                    second_part = parts[1]
+
+                    for char in first_part:
+                        if char != ".":
+                            return ""
+
+                    for char in second_part:
+                        if char != ".":
+                            return ""
+
+                    row = len(first_part)
+                    col = len(second_part)
+
+                    if row < 1 or row > 5:
+                        return ""
+
+                    if col < 1 or col > 5:
+                        return ""
 
                     return find_letter_by_position(row, col)
                 
