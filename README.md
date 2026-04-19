@@ -188,4 +188,18 @@ Pas përfundimit të vizualizimit, programi rikthehet në menunë kryesore, ku p
 
 ### Dekriptimi
 
+Nëse përdoruesi zgjedh **opsionin 2 (Dekriptimi)**, atij i kërkohet të japë ciphertext-in si input.
+Programi e përpunon ciphertext-in dhe rikthen tekstin origjinal (plaintext), i cili shfaqet në ekran.
+
+Në fund, përdoruesit i ofrohet mundësia për të parë vizualizimin e procesit. Nëse zgjedh **“y”**, vizualizimi zhvillohet në të njëjtën mënyrë si te enkriptimi, duke shfaqur hap pas hapi matricën dhe pozicionet e karaktereve sipas grille.
+
+![Grille-TapCode-Ciphers](images/dekriptimi-grille.PNG)
+
+Pas përfundimit të vizualizimit, programi rikthehet në menunë kryesore, ku përdoruesi mund të zgjedhë përsëri algoritmin dhe të vazhdojë me enkriptim ose dekriptim.
+
+Nëse përdoruesi zgjedh **opsionin 2 (Dekriptimi)** dhe fut një ciphertext të pavlefshëm (p.sh. gjatësia e tij nuk është shumëfish i 36 karaktereve, si 36, 72, 108 etj.), programi nuk e përpunon atë dhe shfaq mesazhin e gabimit:
+Ky kontroll ndihmon që programi të mos ketë gabime gjatë ekzekutimit dhe të mos ndalet papritur, duke siguruar që ciphertext-i të jetë në format të saktë dhe i përshtatshëm për procesin e dekriptimit.
+
+![Grille-TapCode-Ciphers](images/gabim-grille.PNG)
+
 ## Shembulli 2 - Tap Code 
