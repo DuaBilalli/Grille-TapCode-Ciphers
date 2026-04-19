@@ -97,6 +97,21 @@ def visualize_tapcode_process(plainText):
 
                     return find_letter_by_position(row, col)
                 
+                def decrypt_tap_code(cipher_text):
+                    result = []
+
+                    parts = cipher_text.split("   ")
+
+                    for part in parts:
+                        if part == "/":
+                            result.append(" ")
+                        else:
+                            letter = decode_letter(part)
+                            if letter != "":
+                                result.append(letter)
+
+                    return "".join(result)
+                
                     print(decode_letter(". ."))
                     print(decode_letter(".. ..."))
                     print(decode_letter("..... ....."))
