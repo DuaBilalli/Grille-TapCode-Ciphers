@@ -206,7 +206,7 @@ Ky kontroll ndihmon që programi të mos ketë gabime gjatë ekzekutimit dhe të
 <img width="278" height="115" alt="image" src="https://github.com/user-attachments/assets/0a2cf5d3-431a-48de-b544-4068d9e36c4e" />
 ## Shembuj të enkriptimit me Tap Code
 
-### Shembulli 1: Enkriptimi i shkronjës `K`
+#### Shembulli 1: Enkriptimi i shkronjës `K`
 
 Në Tap Code përdoret një matricë **5x5**, prandaj ka vetëm 25 pozicione. Për këtë arsye, shkronja **K** nuk ka vend të veçantë dhe trajtohet si **C**.
 
@@ -222,5 +222,24 @@ Hapat e enkriptimit për `K` janë:
    - 3 pika për kolonën → `...`
 6. Rezultati final është:
 
-```text
-. ...
+**`. ...`**
+
+### Shembulli 2: Enkriptimi i `HELLO 123`
+
+Ky shembull tregon mënyrën se si programi enkripton vetëm shkronjat dhe injoron karakteret që nuk mbështeten nga Tap Code.
+
+Hapat e enkriptimit:
+1. Programi merr inputin `HELLO 123`.
+2. Teksti pastrohet dhe kthehet në shkronja të mëdha.
+3. Çdo karakter kontrollohet me radhë.
+4. Shkronjat `H`, `E`, `L`, `L`, `O` enkriptohen sipas pozicionit të tyre në matricën 5x5.
+5. Hapësira kthehet në simbolin `/`.
+6. Numrat `1`, `2` dhe `3` injorohen, sepse nuk janë pjesë e alfabetit të përdorur në Tap Code.
+
+Rezultati i enkriptimit:
+
+
+**`.. ...   . .....   ... .   ... .   ... ....   /`**
+
+
+
