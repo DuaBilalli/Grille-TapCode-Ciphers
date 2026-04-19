@@ -52,6 +52,7 @@ def encrypt_tap_code(text):
 
     return "   ".join(result)
 
+import code
 import time
 
 def visualize_tapcode_process(plainText):
@@ -84,3 +85,18 @@ def visualize_tapcode_process(plainText):
 
                 def find_letter_by_position(row, col):
                     return TAP_MATRIX[row - 1][col - 1]
+                
+                def decode_letter(code):
+                    parts = code.split()
+
+                    if len(parts) != 2:
+                        return ""
+
+                    row = len(parts[0])
+                    col = len(parts[1])
+
+                    return find_letter_by_position(row, col)
+                
+                    print(decode_letter(". ."))
+                    print(decode_letter(".. ..."))
+                    print(decode_letter("..... ....."))
