@@ -203,3 +203,24 @@ Ky kontroll ndihmon që programi të mos ketë gabime gjatë ekzekutimit dhe të
 ![Grille-TapCode-Ciphers](images/gabim-grille.PNG)
 
 ## Shembulli 2 - Tap Code 
+<img width="278" height="115" alt="image" src="https://github.com/user-attachments/assets/0a2cf5d3-431a-48de-b544-4068d9e36c4e" />
+## Shembuj të enkriptimit me Tap Code
+
+### Shembulli 1: Enkriptimi i shkronjës `K`
+
+Në Tap Code përdoret një matricë **5x5**, prandaj ka vetëm 25 pozicione. Për këtë arsye, shkronja **K** nuk ka vend të veçantë dhe trajtohet si **C**.
+
+Hapat e enkriptimit për `K` janë:
+1. Inputi merret nga përdoruesi si `K`.
+2. Programi e kthen shkronjën në uppercase.
+3. Kontrollohet rregulli special dhe `K` zëvendësohet me `C`.
+4. Shkronja `C` gjendet në matricë në:
+   - rreshti 1
+   - kolona 3
+5. Programi krijon Tap Code:
+   - 1 pikë për rreshtin → `.`
+   - 3 pika për kolonën → `...`
+6. Rezultati final është:
+
+```text
+. ...
