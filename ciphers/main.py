@@ -43,7 +43,10 @@ def main():
                 cipherText = input("\nShkruaj tap code-in: ")
 
                 decryptedText = decrypt_tap_code(cipherText)
-                print(f"\nDecrypted:\n{decryptedText}")
+                print()
+                print("Decrypted:")
+                print(decryptedText)
+                print()
 
                 show = input("\nA dëshironi të shihni vizualizimin? (y/n): ").lower()
                 if show == "y":
