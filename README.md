@@ -165,7 +165,19 @@ Pra përveç 1 ose 2, çdo input tjetër konsiderohet i pavlefshëm dhe nuk pran
 
 Nëse përdoruesi zgjedh opsionin **1 (Enkriptimi)**, atij i kërkohet të japë si input plaintext-in. 
 Më pas, programi gjeneron ciphertext-in e enkriptuar dhe e shfaq atë në ekran. 
-Në fund, përdoruesit i ofrohet mundësia të zgjedhë nëse dëshiron të shohë vizualizimin e procesit.
+
+Teksti i zgjedhur për enkriptim është: `shihemi ne route66`.
+
+Hapat e enkriptimit:
+1. Përdoruesi jep si input tekstin `shihemi ne route66`.
+2. Programi e pastron tekstin duke hequr hapësirat dhe duke e kthyer në shkronja të mëdha.
+3. Teksti ndahet në grupe dhe vendoset në një matricë 6x6 sipas rregullave të grille.
+4. Pozicionet e përcaktuara nga grille mbushen me karakteret e tekstit.
+5. Hapësirat e mbetura mbushen me karaktere të rastësishme.
+6. Nga matrica gjenerohet ciphertext-i final.
+7. Rezultati i enkriptimit shfaqet në ekran.
+
+Në fund, përdoruesit i ofrohet mundësia të zgjedhë nëse dëshiron të shoh vizualizimin e procesit.
 
 ![Grille-TapCode-Ciphers](images/enkriptimi-grille.PNG)
 
@@ -191,6 +203,16 @@ Pas përfundimit të vizualizimit, programi rikthehet në menunë kryesore, ku p
 Nëse përdoruesi zgjedh **opsionin 2 (Dekriptimi)**, atij i kërkohet të japë ciphertext-in si input.
 Programi e përpunon ciphertext-in dhe rikthen tekstin origjinal (plaintext), i cili shfaqet në ekran.
 
+Hapat e dekriptimit:
+
+1. Përdoruesi merr ciphertext-in e gjeneruar nga enkriptimi i mëparshëm.
+2. Programi e ndan ciphertext-in në blloqe 6x6 (36 karaktere për secilën matricë).
+3. Çdo bllok vendoset në një matricë dy-dimensionale.
+4. Duke përdorur pozicionet e grille, programi nxjerr vetëm karakteret relevante.
+5. Karakteret e nxjerra bashkohen për të formuar tekstin origjinal.
+6. Karakteri `X` përdoret për plotësim në rastet kur mungojnë karaktere në fund të bllokut.
+7. Programi rikthen tekstin origjinal: `SHIHEMINEROUTE66`.
+
 Në fund, përdoruesit i ofrohet mundësia për të parë vizualizimin e procesit. Nëse zgjedh **“y”**, vizualizimi zhvillohet në të njëjtën mënyrë si te enkriptimi, duke shfaqur hap pas hapi matricën dhe pozicionet e karaktereve sipas grille.
 
 ![Grille-TapCode-Ciphers](images/dekriptimi-grille.PNG)
@@ -203,28 +225,8 @@ Ky kontroll ndihmon që programi të mos ketë gabime gjatë ekzekutimit dhe të
 ![Grille-TapCode-Ciphers](images/gabim-grille.PNG)
 
 ## Shembulli 2 - Tap Code 
-<img width="278" height="115" alt="image" src="https://github.com/user-attachments/assets/0a2cf5d3-431a-48de-b544-4068d9e36c4e" />
-## Shembuj të enkriptimit me Tap Code
 
-#### Shembulli 1: Enkriptimi i shkronjës `K`
-
-Në Tap Code përdoret një matricë **5x5**, prandaj ka vetëm 25 pozicione. Për këtë arsye, shkronja **K** nuk ka vend të veçantë dhe trajtohet si **C**.
-
-Hapat e enkriptimit për `K` janë:
-1. Inputi merret nga përdoruesi si `K`.
-2. Programi e kthen shkronjën në uppercase.
-3. Kontrollohet rregulli special dhe `K` zëvendësohet me `C`.
-4. Shkronja `C` gjendet në matricë në:
-   - rreshti 1
-   - kolona 3
-5. Programi krijon Tap Code:
-   - 1 pikë për rreshtin → `.`
-   - 3 pika për kolonën → `...`
-6. Rezultati final është:
-
-**`. ...`**
-
-### Shembulli 2: Enkriptimi i `HELLO 123`
+### Enkriptimi
 
 Ky shembull tregon mënyrën se si programi enkripton vetëm shkronjat dhe injoron karakteret që nuk mbështeten nga Tap Code.
 
@@ -238,43 +240,36 @@ Hapat e enkriptimit:
 
 Rezultati i enkriptimit:
 
+![Grille-TapCode-Ciphers](images/enkriptimi-tapcode.PNG)
 
-**`.. ...   . .....   ... .   ... .   ... ....   /`**
+Nëse përdoruesi zgjedh opsionin **“y”** për vizualizim, programi shfaq një paraqitje hap-pas-hapi të procesit të enkriptimit ose dekriptimit (varësisht nga veprimi i zgjedhur).
+Në këtë fazë, të dhënat vizuale shfaqen në terminal duke treguar si ndërtohet ose zbërthehet matrica karakter për karakter, duke e bërë procesin më të kuptueshëm.
 
-#### Shembulli 3: Dekriptimi i shkronjës `Z`
+![Grille-TapCode-Ciphers](images/vizualizimi-enc-tapcode.PNG)
 
-Shkronja `Z` është zgjedhur si shembull sepse ndodhet në pozitën e fundit të matricës 5x5. Ky është një rast i rëndësishëm për testim, sepse kontrollon nëse programi e përpunon saktë rastin kufitar, pra vlerat maksimale të rreshtit dhe kolonës.
+### Dekriptimi
 
-Hapat e dekriptimit për `Z` janë:
-1. Përdoruesi jep si input Tap Code-in për shkronjën `Z`.
-2. Kodi për `Z` është `..... .....`.
-3. Program
+Fjala e përdorur si shembull është e koduar në Tap Code për të paraqitur një rast të plotë dekriptimi të një fjale me disa shkronja. Ky test është i rëndësishëm sepse verifikon nëse programi i ndan saktë kodet e secilës shkronjë, i dekripton në mënyrë të rregullt dhe i bashkon për të formuar tekstin origjinal.
 
-#### Shembulli 4: Dekriptimi i `HELLO`
+Është e rëndësishme të theksohet se gjatë dekriptimit përdoruesi nuk jep tekst normal, por versionin e enkriptuar në Tap Code.
 
-Fjala `HELLO` është zgjedhur si shembull sepse paraqet një rast të plotë të dekriptimit të një fjale me disa shkronja. Ky test është i rëndësishëm sepse kontrollon nëse programi i ndan saktë kodet e secilës shkronjë, i dekripton me radhë dhe i bashkon në tekstin origjinal.
+Hapat e dekriptimit:
+1. Përdoruesi jep si input Tap Code-in e fjalës: .. ... . ..... ... . ... . ... ....
+2. Programi e ndan inputin në pjesë të veçanta duke përdorur hapësirat mes shkronjave.
+3. Çdo pjesë përpunohet nga funksioni i dekriptimit (`decode_letter`).
+4. Programi përdor numërimin e pikave për të përcaktuar rreshtin dhe kolonën në matricën 5x5 të Tap Code.
+5. Çdo segment kthehet në shkronjën përkatëse:
+- `.. ...` → `H`
+- `. .....` → `E`
+- `... .` → `L`
+- `... .` → `L`
+- `... ....` → `O`
+6. Të gjitha shkronjat bashkohen në rendin e duhur.
 
-Është e rëndësishme të theksohet se gjatë dekriptimit përdoruesi nuk jep tekst normal si `HELLO`, por jep versionin e enkriptuar në Tap Code.
+Rezultati i fituar:
 
-Hapat e dekriptimit për `HELLO` janë:
-1. Përdoruesi jep si input Tap Code-in e fjalës `HELLO`.
-2. Kodi i enkriptuar për `HELLO` është:
+![Grille-TapCode-Ciphers](images/dekriptimi-tapcode.PNG)
 
-   `.. ...   . .....   ... .   ... .   ... ....`
+Vizualizimi për këtë rast është paraqitur në këtë mënyrë:
 
-3. Programi e ndan inputin në pjesë të veçanta duke përdorur 3 hapësira mes shkronjave.
-4. Çdo pjesë dërgohet te funksioni `decode_letter(code)`.
-5. Programi numëron pikat në secilën pjesë për të gjetur rreshtin dhe kolonën në matricën 5x5.
-6. Çdo kod kthehet në shkronjën përkatëse:
-   - `.. ...` → `H`
-   - `. .....` → `E`
-   - `... .` → `L`
-   - `... .` → `L`
-   - `... ....` → `O`
-7. Në fund, të gjitha shkronjat bashkohen në rendin e duhur.
-8. Rezultati final i dekriptimit është:
-
-**`HELLO`**
-
-Ky shembull tregon që programi mund të dekriptojë saktë një fjalë të plotë dhe jo vetëm një shkronjë të vetme.
-
+![Grille-TapCode-Ciphers](images/vizualizimi-dec-tapcode.PNG)
