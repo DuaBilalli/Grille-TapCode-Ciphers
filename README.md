@@ -48,9 +48,11 @@ Pas ekzekutimit, programi fillon menjëherë dhe shfaq menunë kryesore interakt
 Programi është interaktiv dhe i bazuar në menu, ku përdoruesi mund të:
 
 - Zgjedhë një nga dy algoritmet kriptografike (Single-Letter Grille ose Tap Code)
+- Zgjedhë një nga dy opsionet për enkriptim ose dekriptim
 - Jap plaintext-in për enkriptim
 - Marrë rezultatin e enkriptimit (ciphertext)
-- Kryejë automatikisht dekriptimin për të rikthyer tekstin origjinal
+- Jap ciphertext-in për dekriptim
+- Marrë rezultatin e dekriptimit (plaintext)
 - Shikojë vizualizimin hap pas hapi të procesit të enkriptimit/dekriptimit (opsional)
 - Dal nga programi 
 
@@ -151,6 +153,39 @@ Përdoruesi zgjedh një opsion duke futur numrin përkatës dhe programi vazhdon
 
 - **3** - Programi ndalon ekzekutimin dhe shfaq mesazhin e daljes me sukses.
 
+Nëse përdoruesi zgjedh opsionin 1 ose 2, më pas i shfaqet një menu për të zgjedhur veprimin që dëshiron të kryejë:
+
+![Grille-TapCode-Ciphers](images/hyrja-2.PNG)
+
+Pra përveç 1 ose 2, çdo input tjetër konsiderohet i pavlefshëm dhe nuk pranohet nga programi.
+
 ## Shembulli 1 - Single-Letter Grille
+
+### Enkriptimi
+
+Nëse përdoruesi zgjedh opsionin **1 (Enkriptimi)**, atij i kërkohet të japë si input plaintext-in. 
+Më pas, programi gjeneron ciphertext-in e enkriptuar dhe e shfaq atë në ekran. 
+Në fund, përdoruesit i ofrohet mundësia të zgjedhë nëse dëshiron të shohë vizualizimin e procesit.
+
+![Grille-TapCode-Ciphers](images/enkriptimi-grille.PNG)
+
+Nëse përdoruesi zgjedh **“y”** për vizualizim, programi fillon të shfaqë procesin hap-pas-hapi të vendosjes së karaktereve në matricë.
+
+Fillimisht paraqitet një matricë bosh (6x6), ku të gjitha pozicionet janë të mbushura me simbolin `_`. Më pas, gradualisht shfaqen karakteret e plaintext-it vetëm në pozicionet e përcaktuara nga grille.
+
+Në çdo hap:
+- Një karakter i ri vendoset në matricë
+- Matrica printohet përsëri për të treguar progresin
+- Procesi vazhdon derisa të vendosen të gjitha karakteret e mesazhit
+
+![Grille-TapCode-Ciphers](images/vizualizimi-grille.PNG)
+
+Nëse mesazhi përfundon dhe ende ka hapësira të lira në pozicionet e grille, ato mbushen me karakterin **`X`** për të plotësuar matricën.
+Në rast se mesazhi është më i gjatë, procesi vazhdon në blloqe të reja (matrica të reja 6x6), dhe vizualizimi përsëritet për secilin bllok.
+Pas përfundimit të vizualizimit, programi rikthehet në menunë kryesore, ku përdoruesi mund të zgjedhë përsëri algoritmin dhe të vazhdojë me enkriptim ose dekriptim.
+
+![Grille-TapCode-Ciphers](images/padding-grille.PNG)
+
+### Dekriptimi
 
 ## Shembulli 2 - Tap Code 
