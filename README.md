@@ -93,6 +93,19 @@ Ky implementim e bën algoritmin të thjeshtë për t’u kuptuar, testuar dhe p
 
 ### Dekriptimi
 
+Pjesa e dekriptimit në këtë projekt është zhvilluar hap pas hapi, duke ndjekur strukturën e funksioneve të ndërtuara në Python.
+
+- Në fillim u shtua funksioni për të gjetur një shkronjë nga pozita e saj në matricën 5x5 (`find_letter_by_position`).
+- Pastaj u implementua logjika e dekriptimit të një shkronje të vetme (`decode_letter`), ku kodi Tap Code ndahet në dy pjesë dhe numri i pikave përdoret për të gjetur rreshtin dhe kolonën.
+- Më pas u shtua funksioni për dekriptimin e tekstit të plotë (`decrypt_tap_code`), i cili lexon çdo pjesë të kodit dhe e kthen në tekst normal.
+- Në vazhdim u trajtuan edhe hapësirat, duke përdorur simbolin `/` si ndarje mes fjalëve gjatë dekriptimit.
+- Për ta bërë programin më të qëndrueshëm, u shtuan kontrolle për input të pavlefshëm, në mënyrë që karakteret ose formatet jo të sakta të mos shkaktojnë gabime.
+- Pas kësaj, funksionaliteti i dekriptimit u lidh me programin kryesor (`main.py`), në mënyrë që përdoruesi të mund të zgjedhë opsionin e dekriptimit nga menuja.
+- Gjithashtu u shtua edhe vizualizimi i procesit të dekriptimit, për ta treguar hap pas hapi kthimin e kodit Tap Code në shkronjat përkatëse.
+- Në fund u shtuan edhe shembuj testimi për dekriptimin, për të verifikuar që funksionet japin rezultate të sakta.
+
+Ky proces e bën dekriptimin të qartë, të ndarë në funksione të vogla dhe të lehtë për t’u kuptuar, testuar dhe përdorur.
+
 ## Single-Letter Grille Cipher
 **Grille Cipher** është një teknikë kriptografike me origjinë në shekullin XVI, e shpikur nga matematikani italian Girolamo Cardano rreth vitit 1550. Ajo është përdorur në komunikime diplomatike dhe ushtarake gjatë shekujve XVII–XIX. Metoda bazohet në përdorimin e një grille që vendoset mbi një fletë, ku vetëm shkronjat e dukshme përmes këtyre hapjeve formojnë mesazhin sekret dhe grille rrotullohet disa herë (zakonisht 90 shkallë).
 
