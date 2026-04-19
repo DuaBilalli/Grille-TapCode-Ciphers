@@ -33,9 +33,9 @@ def main():
                     print("\nCiphertext nuk është valid.")
                 else:
                     plainText = single_letter_grille_decrypt(cipherText)
-                    print(f"Decrypted:\n{plainText}")
+                    print(f"\nDecrypted:\n{plainText}")
 
-                    show = input("A dëshironi të shihni vizualizimin? (y/n): ").lower()
+                    show = input("\nA dëshironi të shihni vizualizimin? (y/n): ").lower()
                     if show == "y":
                         visualize_grille_process(cipherText)
 
