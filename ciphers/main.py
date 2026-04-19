@@ -11,17 +11,36 @@ def main():
         choice = input("\nZgjedhja: ")
 
         if choice == "1":
-            plainText = input("\nShkruaj plaintext-in: ")
 
-            cipherText = single_letter_grille_encrypt(plainText)
-            print(f"\nEncrypted:\n{cipherText}")
+            print("\n1. Encrypt")
+            print("2. Decrypt")
 
-            decrypted = single_letter_grille_decrypt(cipherText)
-            print(f"Decrypted:\n{decrypted}")
+            grille_choice = input("\nZgjedh veprimin: ")
 
-            show = input("\nA dëshironi të shihni vizualizimin? (y/n): ").lower()
-            if show == "y":
-                visualize_grille_process(cipherText)
+            if grille_choice == "1":
+                plainText = input("\nShkruaj plaintext-in: ")
+                cipherText = single_letter_grille_encrypt(plainText)
+                print(f"\nEncrypted:\n{cipherText}")
+
+                show = input("A dëshironi të shihni vizualizimin? (y/n): ").lower()
+                if show == "y":
+                    visualize_grille_process(cipherText)
+
+            elif grille_choice == "2":
+                cipherText = input("\nShkruaj ciphertext-in: ")
+
+                if len(cipherText) % 36 != 0:
+                    print("\nCiphertext nuk është valid.")
+                else:
+                    plainText = single_letter_grille_decrypt(cipherText)
+                    print(f"Decrypted:\n{plainText}")
+
+                    show = input("A dëshironi të shihni vizualizimin? (y/n): ").lower()
+                    if show == "y":
+                        visualize_grille_process(cipherText)
+
+            else:
+                print("\nZgjedhje e pavlefshme.")
 
         elif choice == "2":
             print("\n1. Encrypt")
