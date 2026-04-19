@@ -95,25 +95,8 @@ def decode_letter(code):
     if len(parts) != 2:
         return ""
 
-    first_part = parts[0]
-    second_part = parts[1]
-
-    for char in first_part:
-        if char != ".":
-            return ""
-
-    for char in second_part:
-        if char != ".":
-            return ""
-
-    row = len(first_part)
-    col = len(second_part)
-
-    if row < 1 or row > 5:
-        return ""
-
-    if col < 1 or col > 5:
-        return ""
+    row = len(parts[0])
+    col = len(parts[1])
 
     return find_letter_by_position(row, col)
 
@@ -133,7 +116,6 @@ def decrypt_tap_code(cipher_text):
 
     return "".join(result)
 
-
 def visualize_tapcode_decryption(cipher_text):
     print("\n[VIZUALIZIMI I DEKRIPTIMIT]\n")
     time.sleep(1)
@@ -152,3 +134,6 @@ def visualize_tapcode_decryption(cipher_text):
                 print(f"{part} -> {letter}")
                 time.sleep(1)
                 print()
+
+        print("TEST decode_letter:", decode_letter(". ."))
+        print("TEST decrypt_tap_code:", decrypt_tap_code(". ."))
