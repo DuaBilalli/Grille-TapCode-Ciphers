@@ -1,5 +1,5 @@
 from ciphers.single_letter_grille import single_letter_grille_encrypt, single_letter_grille_decrypt, visualize_grille_process
-from ciphers.tap_code import encrypt_tap_code, decrypt_tap_code, visualize_tapcode_process
+from ciphers.tap_code import encrypt_tap_code, decrypt_tap_code, visualize_tapcode_process, visualize_tapcode_decryption
 
 def main():
     while True:
@@ -44,6 +44,10 @@ def main():
 
                 decryptedText = decrypt_tap_code(cipherText)
                 print(f"\nDecrypted:\n{decryptedText}")
+
+                show = input("\nA dëshironi të shihni vizualizimin? (y/n): ").lower()
+                if show == "y":
+                    visualize_tapcode_decryption(cipherText)
 
             else:
                 print("\nZgjedhje e pavlefshme.")

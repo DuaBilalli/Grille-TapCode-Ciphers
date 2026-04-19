@@ -129,6 +129,25 @@ def visualize_tapcode_process(plainText):
 
                     return "".join(result)
                 
+                def visualize_tapcode_decryption(cipher_text):
+                    print("\n[VIZUALIZIMI I DEKRIPTIMIT]\n")
+                    time.sleep(1)
+
+                    parts = cipher_text.split("   ")
+
+                    for part in parts:
+                        if part == "/":
+                            print("/ -> hapesire")
+                            time.sleep(1)
+                            print()
+                        else:
+                            letter = decode_letter(part)
+
+                            if letter != "":
+                                print(f"{part} -> {letter}")
+                                time.sleep(1)
+                                print()
+                
                     print(decode_letter(". ."))
                     print(decode_letter(".. ..."))
                     print(decode_letter("..... ....."))
