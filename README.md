@@ -118,13 +118,9 @@ Sot kjo teknikë konsiderohet e pasigurt dhe nuk përdoret në kriptografinë mo
 Enkriptimi në Single-Letter Grille bëhet duke vendosur plaintext-in në një matricë duke përdorur një grille.
 
 - Fillimisht krijohet një matricë bosh, me madhësi 6x6 në rastin tonë. 
-
 - Më pas definohet maska (grille), e cila përcakton saktë pozicionet ku do të vendosen shkronjat, ku çdo pozicion përdoret vetëm një herë dhe nuk ka rotacion të maskës.  
-
 - Plaintext-i merret dhe secili karakter vendoset vetëm në pozicionet e parapërcaktuara të maskës, një nga një sipas rendit të tij.
-
 - Pozicionet e mbetura në matricë mbushen me karaktere të rastësishme (shkronja dhe numra), për të fshehur strukturën e mesazhit.
-
 - Në fund, matrica lexohet rresht pas rreshti për të krijuar tekstin e enkriptuar (ciphertext).
 
 **Ideja kryesore:** Meqë karakteret mbushëse janë të rastësishme, i njëjti mesazh mund të prodhojë ciphertext të ndryshëm sa herë ekzekutohet dhe vetëm personi që posedon maskën e saktë mund të gjej mesazhin origjinal.
@@ -134,15 +130,10 @@ Enkriptimi në Single-Letter Grille bëhet duke vendosur plaintext-in në një m
 Dekriptimi në Single Letter Grille bëhet duke përdorur të njëjtën grille (maskë) që është përdorur gjatë enkriptimit.
 
 - Fillimisht ciphertext-i ndahet në blloqe prej 36 karakteresh (6x6).
-
 - Çdo bllok i ciphertext-it vendoset në një matricë 6x6, duke u mbushur matrica me karaktere rresht pas rreshti.
-
 - Më pas aplikohet maska(grille), e cila përcakton saktë pozicionet ku gjendet plaintext-i.
-
 - Karakteret lexohen vetëm nga pozicionet e paracaktuara të maskës, një nga një sipas rendit të tyre.
-
 - Karakteret e lexuara bashkohen për të formuar mesazhin origjinal (plaintext).
-
 - Në fund hiqen karakteret 'X' të përdorura si padding gjatë enkriptimit.
 
 **Ideja kryesore:** Vetëm duke përdorur të njëjtën maskë mund të identifikohen pozicionet e sakta në matricë dhe të gjendet mesazhi origjinal.
