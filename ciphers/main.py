@@ -3,7 +3,7 @@ from tap_code import encrypt_tap_code, decrypt_tap_code, visualize_tapcode_proce
 
 def main():
     while True:
-        print("\nZgjedhnni algoritmin që dëshironi të përdorni:\n")
+        print("\nZgjedhni algoritmin që dëshironi të përdorni:\n")
         print("1. Single-Letter Grille")
         print("2. Tap Code")
         print("3. Dil")
