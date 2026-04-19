@@ -148,3 +148,18 @@ Dekriptimi në Single Letter Grille bëhet duke përdorur të njëjtën grille (
 **Ideja kryesore:** Vetëm duke përdorur të njëjtën maskë mund të identifikohen pozicionet e sakta në matricë dhe të gjendet mesazhi origjinal.
 
 # Shembuj të ekzekutimit
+Pas ekzekutimit të programit, përdoruesi fillimisht do të shoh menunë kryesore në terminal:
+
+![Grille-TapCode-Ciphers](images/hyrja.PNG)
+
+Përdoruesi zgjedh një opsion duke futur numrin përkatës dhe programi vazhdon sipas zgjedhjes:
+
+- **1** - Aktivizohet algoritmi *Single-Letter Grille*. Programi kërkon tekstin hyrës, e enkripton atë duke përdorur matricë dhe grille, dhe më pas e dekripton për verifikim. Gjithashtu ofrohet opsioni për vizualizim të procesit.
+
+- **2** - Aktivizohet algoritmi *Tap Code*. Programi kërkon tekstin hyrës dhe e konverton atë në kod të bazuar në koordinata (rresht dhe kolonë), pastaj e dekripton për të rikthyer tekstin origjinal. Edhe ky algoritëm ofron opsionin për vizualizim.
+
+- **3** - Programi ndalon ekzekutimin dhe shfaq mesazhin e daljes me sukses.
+
+## Shembulli 1 - Single-Letter Grille
+
+## Shembulli 2 - Tap Code 
