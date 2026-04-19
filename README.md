@@ -250,5 +250,31 @@ Hapat e dekriptimit për `Z` janë:
 2. Kodi për `Z` është `..... .....`.
 3. Program
 
+#### Shembulli 4: Dekriptimi i `HELLO`
 
+Fjala `HELLO` është zgjedhur si shembull sepse paraqet një rast të plotë të dekriptimit të një fjale me disa shkronja. Ky test është i rëndësishëm sepse kontrollon nëse programi i ndan saktë kodet e secilës shkronjë, i dekripton me radhë dhe i bashkon në tekstin origjinal.
+
+Është e rëndësishme të theksohet se gjatë dekriptimit përdoruesi nuk jep tekst normal si `HELLO`, por jep versionin e enkriptuar në Tap Code.
+
+Hapat e dekriptimit për `HELLO` janë:
+1. Përdoruesi jep si input Tap Code-in e fjalës `HELLO`.
+2. Kodi i enkriptuar për `HELLO` është:
+
+   `.. ...   . .....   ... .   ... .   ... ....`
+
+3. Programi e ndan inputin në pjesë të veçanta duke përdorur 3 hapësira mes shkronjave.
+4. Çdo pjesë dërgohet te funksioni `decode_letter(code)`.
+5. Programi numëron pikat në secilën pjesë për të gjetur rreshtin dhe kolonën në matricën 5x5.
+6. Çdo kod kthehet në shkronjën përkatëse:
+   - `.. ...` → `H`
+   - `. .....` → `E`
+   - `... .` → `L`
+   - `... .` → `L`
+   - `... ....` → `O`
+7. Në fund, të gjitha shkronjat bashkohen në rendin e duhur.
+8. Rezultati final i dekriptimit është:
+
+**`HELLO`**
+
+Ky shembull tregon që programi mund të dekriptojë saktë një fjalë të plotë dhe jo vetëm një shkronjë të vetme.
 
