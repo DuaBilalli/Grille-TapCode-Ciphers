@@ -241,5 +241,14 @@ Rezultati i enkriptimit:
 
 **`.. ...   . .....   ... .   ... .   ... ....   /`**
 
+#### Shembulli 3: Dekriptimi i shkronjës `Z`
+
+Shkronja `Z` është zgjedhur si shembull sepse ndodhet në pozitën e fundit të matricës 5x5. Ky është një rast i rëndësishëm për testim, sepse kontrollon nëse programi e përpunon saktë rastin kufitar, pra vlerat maksimale të rreshtit dhe kolonës.
+
+Hapat e dekriptimit për `Z` janë:
+1. Përdoruesi jep si input Tap Code-in për shkronjën `Z`.
+2. Kodi për `Z` është `..... .....`.
+3. Program
+
 
 
